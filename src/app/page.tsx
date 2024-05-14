@@ -14,6 +14,7 @@ const Page = () => {
 
   const handleEditorChange = (editor: any) => {
     setContent(editor.getHTML());
+    console.log(editor.getHTML());
   };
 
   return (
@@ -25,13 +26,15 @@ const Page = () => {
         className="w-full h-[40vh] "
         defaultValue={{ type: "doc", content: [] }}
       />
-
+      {/* 
       <div
         dangerouslySetInnerHTML={{
           __html: content,
         }}
         className="mt-2"
-      />
+      /> */}
+
+      <div className="mt-8">{content}</div>
     </div>
   );
 };
